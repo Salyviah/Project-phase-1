@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const fetchFactBtn = document.getElementById("fetchFactBtn");
+    const refreshBtn = document.getElementById("refreshBtn");
+    const resetBtn = document.getElementById("resetBtn"); // New button
     const factDisplay = document.getElementById("factDisplay");
     const factPicture = document.getElementById("factPicture");
     const factName = document.getElementById("factName");
@@ -8,6 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchFactBtn.addEventListener("click", function () {
         fetchCatFact();
     });
+
+    refreshBtn.addEventListener("click", function () {
+        fetchCatFact();
+    });
+
+    resetBtn.addEventListener("click", function () {
+        resetDisplay();
+    }); // Add event listener for the reset button
 
     function fetchCatFact() {
         fetch("db.json")
@@ -33,5 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
         factDisplay.innerText = `Fact: ${fact.fact}`;
         factPicture.innerHTML = `<img src="${fact.picture}" alt="Cat Picture">`;
         factCharacteristics.innerText = `Characteristics: ${fact.characteristics.join(", ")}`;
+    }
+
+    function resetDisplay() {
+        factName.innerText = "";
+        factDisplay.innerText = "";
+        factPicture.innerHTML = "";
+        factCharacteristics.innerText = "";
     }
 });
