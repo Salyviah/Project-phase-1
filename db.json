@@ -1,23 +1,46 @@
 {
-    "breeds": [
-      {
-        "name": "Persian",
-        "shedding": "Low",
-        "weight": "Medium"
-      },
-      {
-        "name": "Siamese",
-        "shedding": "Low",
-        "weight": "Light"
-      },
-      {
-        "name": "Maine Coon",
-        "shedding": "High",
-        "weight": "Heavy"
-      }
-    ]
-  }
-  
-  
-  
-  
+  "catFacts": [
+    {
+      "id": 1,
+      "name": "Siamese",
+      "fact": "Siamese cats are one of the oldest and most recognizable breeds in the world.",
+      "picture": "https://storage.googleapis.com/catmatch/.data/Siamese/Siamese_56.jpg",
+      "characteristics": ["Intelligent", "Affectionate", "Vocal"]
+    },
+    {
+      "id": 2,
+      "name": "Bombay",
+      "fact": "Bombay cats are often called 'mini panthers' because of their sleek black coats and gold eyes.",
+      "picture": "https://storage.googleapis.com/catmatch/.data/Bombay/Bombay_161.jpg",
+      "characteristics": ["Playful", "Friendly", "Curious"]
+    },
+    {
+      "id": 3,
+      "name": "Maine Coon",
+      "fact": "Maine Coon cats are one of the largest domesticated cat breeds, known for their tufted ears and bushy tails.",
+      "picture": "https://storage.googleapis.com/catmatch/.data/Maine Coon/Maine_Coon-43510901_5974.jpg",
+      "characteristics": ["Gentle", "Adaptable", "Friendly"]
+    },
+    {
+      "id": 4,
+      "name": "British Shorthair",
+      "fact": "British Shorthair cats are known for their stocky build, dense coat, and round face.",
+      "picture": "https://storage.googleapis.com/catmatch/.data/British Shorthair/British_Shorthair_266.jpg",
+      "characteristics": ["Easygoing", "Loyal", "Independent"]
+    },
+    {
+      "id": 7,
+      "name": "Sphynx",
+      "fact": "Sphynx cats are known for their lack of fur and affectionate nature.",
+      "picture": "https://storage.googleapis.com/catmatch/.data/Sphynx/Sphynx_172.jpg",
+      "characteristics": ["Hairless", "Curious", "Friendly"]
+    },
+    {
+      "id": 8,
+      "name": "Egyptian Mau",
+      "fact": "Egyptian Maus are one of the few naturally spotted breeds of domesticated cat.",
+      "picture": "https://storage.googleapis.com/catmatch/.data/Egyptian Mau/Egyptian_Mau-33523925_490.jpg",
+      "characteristics": ["Agile", "Inquisitive", "Active"]
+    }
+  ]
+}

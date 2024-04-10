@@ -1,94 +1,37 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-const PORT = process.env.PORT || 3000;
+document.addEventListener("DOMContentLoaded", function () {
+    const fetchFactBtn = document.getElementById("fetchFactBtn");
+    const factDisplay = document.getElementById("factDisplay");
+    const factPicture = document.getElementById("factPicture");
+    const factName = document.getElementById("factName");
+    const factCharacteristics = document.getElementById("factCharacteristics");
 
-// Middleware to parse JSON bodies
-app.use(bodyParser.json());
-
-// Sample data for breeds
-const breeds = require('./db.json').breeds;
-
-// Endpoint to get a list of breeds
-app.get('/api/breeds', (req, res) => {
-  res.json(breeds);
-});
-
-// Endpoint to search breeds based on shedding and weight
-app.get('/api/breeds/search', (req, res) => {
-  const { shedding, weight } = req.query;
-  let filteredBreeds = breeds;
-
-  // Filter breeds based on shedding
-  if (shedding) {
-    filteredBreeds = filteredBreeds.filter(breed => breed.shedding.toLowerCase() === shedding.toLowerCase());
-  }
-
-  // Filter breeds based on weight
-  if (weight) {
-    filteredBreeds = filteredBreeds.filter(breed => breed.weight.toLowerCase() === weight.toLowerCase());
-  }
-
-  res.json(filteredBreeds);
-});
-
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
-// Event listener for search button
-document.getElementById('searchButton').addEventListener('click', searchBreeds);
-
-// Event listener for shedding input field
-document.getElementById('sheddingInput').addEventListener('input', handleSheddingInput);
-
-// Event listener for weight input field
-document.getElementById('weightInput').addEventListener('input', handleWeightInput);
-
-// Function to search breeds
-function searchBreeds() {
-  const shedding = document.getElementById('sheddingInput').value;
-  const weight = document.getElementById('weightInput').value;
-
-  fetch(`/api/breeds/search?shedding=${shedding}&weight=${weight}`)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      displayBreeds(data);
-    })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
+    fetchFactBtn.addEventListener("click", function () {
+        fetchCatFact();
     });
-}
 
-// Function to handle shedding input
-function handleSheddingInput() {
-  // You can perform any necessary actions here
-}
+    function fetchCatFact() {
+        fetch("db.json")
+            .then(response => response.json())
+            .then(data => {
+                const catFacts = data.catFacts;
+                const randomFact = getRandomFact(catFacts);
+                displayFact(randomFact);
+            })
+            .catch(error => {
+                console.error("Error fetching cat facts:", error);
+                displayFact("Failed to fetch cat fact. Please try again later.");
+            });
+    }
 
-// Function to handle weight input
-function handleWeightInput() {
-  // You can perform any necessary actions here
-}
+    function getRandomFact(factsArray) {
+        const randomIndex = Math.floor(Math.random() * factsArray.length);
+        return factsArray[randomIndex];
+    }
 
-// Function to display breeds
-function displayBreeds(breeds) {
-  const breedInfoContainer = document.getElementById('breedInfo');
-  breedInfoContainer.innerHTML = '';
-
-  breeds.forEach(breed => {
-    const breedCard = document.createElement('div');
-    breedCard.classList.add('breed-card');
-    breedCard.innerHTML = `
-      <h2>${breed.name}</h2>
-      <p>Shedding: ${breed.shedding}</p>
-      <p>Weight: ${breed.weight}</p>
-    `;
-    breedInfoContainer.appendChild(breedCard);
-  });
-}
+    function displayFact(fact) {
+        factName.innerText = `Name: ${fact.name}`;
+        factDisplay.innerText = `Fact: ${fact.fact}`;
+        factPicture.innerHTML = `<img src="${fact.picture}" alt="Cat Picture">`;
+        factCharacteristics.innerText = `Characteristics: ${fact.characteristics.join(", ")}`;
+    }
+});

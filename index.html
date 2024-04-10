@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cat Facts Browser</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Facts</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <h1>Cat Breed Browser</h1>
-  <div class="search-container">
-    <label for="sheddingInput">Shedding:</label>
-    <input type="text" id="sheddingInput" placeholder="Enter shedding type">
-    <label for="weightInput">Weight:</label>
-    <input type="text" id="weightInput" placeholder="Enter weight">
-    <button onclick="searchBreeds()">Search</button>
-  </div>
+    <div class="container">
+        <h1>Cat Facts</h1>
+        <button id="fetchFactBtn">Fetch a Cat Fact</button>
+        <div id="factDisplay"></div>
+        <div id="factName"></div> <!-- Added this line -->
+        <div id="factPicture"></div>
+        <div id="factCharacteristics"></div>
+    </div>
 
-  <div id="breedInfo"></div>
-
-  <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
+
+
