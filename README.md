@@ -12,7 +12,7 @@ A computer with a bash terminal and node installed.
 Access to the internet.
 
 
-  git@github.com:Salyviah/project-1/email-extractor.git
+ https://github.com/Salyviah/Project-phase-1.git
 
 
 License
