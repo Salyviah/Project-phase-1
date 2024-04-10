@@ -1,0 +1,23 @@
+{
+    "breeds": [
+      {
+        "name": "Persian",
+        "shedding": "Low",
+        "weight": "Medium"
+      },
+      {
+        "name": "Siamese",
+        "shedding": "Low",
+        "weight": "Light"
+      },
+      {
+        "name": "Maine Coon",
+        "shedding": "High",
+        "weight": "Heavy"
+      }
+    ]
+  }
+  
+  
+  
+  
