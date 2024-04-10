@@ -3,11 +3,13 @@ Using a combination of Node.js, Angular, and Tasker, this app will combine APIs 
 
 By Salyviah kamau
 
-Description
+  Description
+
 This API provides endpoints to get random cat facts. breeds. Folder for breeds. GETReturns a list of breeds
 
-How to Use
-Requirements
+  How to Use
+
+    Requirements
 A computer with a bash terminal and node installed.
 Access to the internet.
 
