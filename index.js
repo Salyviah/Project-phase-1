@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }); // Add event listener for the reset button
 
     function fetchCatFact() {
-        fetch("db.json")
+        fetch("./db/db.json")
             .then(response => response.json())
             .then(data => {
                 const catFacts = data.catFacts;
