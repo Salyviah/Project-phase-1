@@ -1,26 +1,29 @@
-                    CAT FACTS
-Using a combination of Node.js, Angular, and Tasker, this app will combine APIs and Services from the web to do just one thing... send cat facts, April 08 2024
-
-By Salyviah kamau
-
-  Description
-
-This API provides endpoints to get random cat facts. breeds. Folder for breeds. GETReturns a list of breeds
-
-  How to Use
-
-    Requirements
-A computer with a bash terminal and node installed.
-Access to the internet.
+"By harnessing the capabilities of Node.js, Angular, and Tasker, this application seamlessly merges web APIs and services to fulfill a singular purpose: delivering cat facts. Utilizing Node.js for backend functionality, Angular for dynamic frontend interactions, and Tasker for streamlined task automation, this app offers users a unique experience of receiving fascinating cat-related information. With the ability to access and combine data from diverse online sources, users can indulge in a constant stream of delightful cat facts, making this app a must-have for cat enthusiasts seeking a daily dose of feline fun."
 
 
- https://github.com/Salyviah/Project-phase-1.git
+by  Salyviah Kamau
 
+date 9/04/2024
 
-License
+Requirements
+
+A computer with a bash terminal and node installed. Access to the internet. Installation Process Clone this repository using :https://github.com/Salyviah/Project-phase-1.git
+
+git clone or by downloading a ZIP file of the code.
+
+The repository, if downloaded as a .zip file will need to be extracted to your preferred location.
+
+Navigate to the project folder on your bash terminal.
+
+Install dependancies using
+
+npm install Run the application using
+
+node index.js Technologies Used JS Node Runtime Environment Support and Contact Details Incase of any query, need for collaboration or issues with this code, feel free to reach me at reagan.mariera@student.moringaschool.com
+
 MIT License
 
-Copyright © 2024 Salyviah kamau
+Copyright (c) 2024 Salyviah Kamau
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
