@@ -1,3 +1,5 @@
+              CAT FACTS
+
 "By harnessing the capabilities of Node.js, Angular, and Tasker, this application seamlessly merges web APIs and services to fulfill a singular purpose: delivering cat facts. Utilizing Node.js for backend functionality, Angular for dynamic frontend interactions, and Tasker for streamlined task automation, this app offers users a unique experience of receiving fascinating cat-related information. With the ability to access and combine data from diverse online sources, users can indulge in a constant stream of delightful cat facts, making this app a must-have for cat enthusiasts seeking a daily dose of feline fun."
 
 
@@ -17,9 +19,9 @@ Navigate to the project folder on your bash terminal.
 
 Install dependancies using
 
-npm install Run the application using
+json server
 
-node index.js Technologies Used JS Node Runtime Environment Support and Contact Details Incase of any query, need for collaboration or issues with this code, feel free to reach me at reagan.mariera@student.moringaschool.com
+use console to check errors Support and Contact Details Incase of any query, need for collaboration or issues with this code, feel free to reach me at salyviah.kamau@student.moringaschool.com
 
 MIT License
 
