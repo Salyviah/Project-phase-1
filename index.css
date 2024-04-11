@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    background-color:rgb(34, 241, 241);
 }
 
 .container {
@@ -37,3 +38,9 @@ h1 {
 #factCharacteristics {
     margin-top: 20px;
 }
+button{background-color:rgb(95, 236, 13);
+color: azure;
+padding: 5px;
+border-radius: 5px;
+border-color: green;
+border:none}

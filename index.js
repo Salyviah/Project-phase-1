@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const fetchFactBtn = document.getElementById("fetchFactBtn");
     const refreshBtn = document.getElementById("refreshBtn");
-    const resetBtn = document.getElementById("resetBtn"); // New button
+    const resetBtn = document.getElementById("resetBtn"); 
     const factDisplay = document.getElementById("factDisplay");
     const factPicture = document.getElementById("factPicture");
     const factName = document.getElementById("factName");
     const factCharacteristics = document.getElementById("factCharacteristics");
+    const favoritesList = document.getElementById("favoritesList"); // New element to display favorites
 
     fetchFactBtn.addEventListener("click", function () {
         fetchCatFact();
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     resetBtn.addEventListener("click", function () {
         resetDisplay();
-    }); // Add event listener for the reset button
+    });
 
     function fetchCatFact() {
         fetch("./db/db.json")
@@ -43,6 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
         factDisplay.innerText = `Fact: ${fact.fact}`;
         factPicture.innerHTML = `<img src="${fact.picture}" alt="Cat Picture">`;
         factCharacteristics.innerText = `Characteristics: ${fact.characteristics.join(", ")}`;
+        
+        const likeBtn = document.createElement("button");
+        likeBtn.innerText = "Like";
+        likeBtn.addEventListener("click", function () {
+            incrementLikeCount(fact);
+        });
+
+        factDisplay.appendChild(likeBtn);
     }
 
     function resetDisplay() {
@@ -51,4 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
         factPicture.innerHTML = "";
         factCharacteristics.innerText = "";
     }
+
+    function incrementLikeCount(fact) {
+        // Implement logic to increment like count for the fact
+        alert(`You liked the fact about ${fact.name}`);
+    }
 });
+
